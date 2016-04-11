@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B8BCEB8-F210-46C2-97A1-84BF40EFA564}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PGLData</RootNamespace>
+    <AssemblyName>PGLData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PGL_mixed.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NSoup">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Packages\NSoup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutPGLData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutPGLData.Designer.cs">
+      <DependentUpon>AboutPGLData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessHandler.cs" />
+    <Compile Include="Analyze.cs" />
+    <Compile Include="BugBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BugBox.Designer.cs">
+      <DependentUpon>BugBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartPanel.Designer.cs">
+      <DependentUpon>ChartPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="ConfigModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigModification.Designer.cs">
+      <DependentUpon>ConfigModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadOldSeasons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadOldSeasons.Designer.cs">
+      <DependentUpon>DownloadOldSeasons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetch.cs" />
+    <Compile Include="MainPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalConstants.cs" />
+    <Compile Include="HtmlParser.cs" />
+    <Compile Include="JsonParser.cs" />
+    <Compile Include="ListViewSort.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SelfDefinedModelParser.cs" />
+    <Compile Include="SelfDesignedMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfDesignedMsg.Designer.cs">
+      <DependentUpon>SelfDesignedMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAnalysis.Designer.cs">
+      <DependentUpon>ShowAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketHandler.cs" />
+    <Compile Include="UpdateApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateApp.Designer.cs">
+      <DependentUpon>UpdateApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBySqls.cs" />
+    <Compile Include="UpdateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateData.Designer.cs">
+      <DependentUpon>UpdateData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutPGLData.resx">
+      <DependentUpon>AboutPGLData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BugBox.resx">
+      <DependentUpon>BugBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartPanel.resx">
+      <DependentUpon>ChartPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigModification.resx">
+      <DependentUpon>ConfigModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadOldSeasons.resx">
+      <DependentUpon>DownloadOldSeasons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfDesignedMsg.resx">
+      <DependentUpon>SelfDesignedMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAnalysis.resx">
+      <DependentUpon>ShowAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateApp.resx">
+      <DependentUpon>UpdateApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateData.resx">
+      <DependentUpon>UpdateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PGL_mixed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\萌queen.png" />
+    <None Include="Resources\Gardevoir67.png" />
+    <None Include="bin\Debug\Gardevoir.png" />
+    <Content Include="PGL_mixed.ico" />
+    <None Include="Resources\water.gif" />
+    <None Include="Resources\steel.gif" />
+    <None Include="Resources\rock.gif" />
+    <None Include="Resources\psychic.gif" />
+    <None Include="Resources\poison.gif" />
+    <None Include="Resources\normal.gif" />
+    <None Include="Resources\ice.gif" />
+    <None Include="Resources\ground.gif" />
+    <None Include="Resources\grass.gif" />
+    <None Include="Resources\ghost.gif" />
+    <None Include="Resources\flying.gif" />
+    <None Include="Resources\fire.gif" />
+    <None Include="Resources\fighting.gif" />
+    <None Include="Resources\fairy.gif" />
+    <None Include="Resources\electric.gif" />
+    <None Include="Resources\dragon.gif" />
+    <None Include="Resources\dark.gif" />
+    <None Include="Resources\bug.gif" />
+    <None Include="Resources\special.png" />
+    <None Include="Resources\physical.png" />
+    <None Include="Resources\other.png" />
+    <None Include="Resources\update.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
